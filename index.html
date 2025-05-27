@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculadora de Horas Trabalhadas</h1>
+
+    <label>Horas Trabalhadas</label>
+    <input id="Horas" type="number" placeholder="Ex: 40h">
+
+    <label for="">Valor por Horas (R$)</label>
+    <input id="Valor" type="number" placeholder="Ex: R$50">
+    <button onclick="CacularoPagamento">Cacular o pagamento</button>
+  
+    <script>
+        function calcularpagamento() {
+            const horas = Number(document.getElementById('horas'))
+            const valor = Number(document.getElementById('valorhoras'))
+            let resultado = '';
+
+            const total = horas + valorHoras;
+            resultado = `Total a receber: R$${total}`;
+            resultado =  total  >= 2000 ? 'Parabéns projeto premium' : resultado;
+            resultado = horas <= 0 ? 'Horas invalida' : resultado;
+            resultado = valorHoras <= 0 ? 'Valor horas inválida' : resultado;
+
+            document.getElementById('resultado').innerHTML = resultado;
+        }
+    </script>
+</body>
+</html>
